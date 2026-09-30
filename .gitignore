@@ -1,0 +1,13 @@
+# Archivos de datos pesados
+/data/bronze/1_proyecciones_poblacion_dane.xlsx
+/data/silver/relacion_ips_capacidad_instalada_cleaned.csv
+
+# Entorno virtual
+venv/
+
+# Variables de entorno / secretos
+.env
+
+# Caché de Python
+__pycache__/
+*.pyc

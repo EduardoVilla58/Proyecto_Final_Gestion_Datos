@@ -1,0 +1,52 @@
+project:
+  name: proyecto_final_gyd
+  version: 1.0
+  description: Este proyecto buca estudiar la relación entre la transición demográfica acelerada hacia el envejecimiento poblacional y la precaria cobertura sanitaria en las zonas rurales de la región pacifica de Colombia (Chocó, Valle del Cauca, Cauca y Nariño)
+  author: Jaiber Eduardo Muñoz Villa, Sebastian Paredes, Michael Escobar, Manuel Alejandro Mosquera
+  license: MIT
+  date: 2026-09-28
+
+paths:
+  data_dir: data
+  bronze_dir: data/bronze
+  silver_dir: data/silver
+  gold_dir: data/gold
+  logs_dir: logs
+  notebooks_dir: notebooks
+
+sources:
+#fuente 1
+  proyecciones_poblacion_dane:
+    path: data\bronze\1_proyecciones_poblacion_dane.xlsx
+    file_name: 1_proyecciones_poblacion_dane.xlsx
+    file_type: xlsx
+    sheetname: PobMunicipalxÁreaSexoEdad
+
+#fuente 2
+  relacion_ips_capacidad_instalada:
+    path: data\bronze\2_relacion_ips_capacidad_instalada.csv
+    file_name: 2_relacion_ips_capacidad_instalada.csv
+    file_type: csv
+
+#fuente 3
+  registro_prestadores_salud:
+    path: data\bronze\3_registro_prestadores_salud.xlsx
+    file_name: 3_registro_prestadores_salud.xlsx
+    file_type: xlsx
+    sheetname: Registro_Especial_de_Prestadore
+
+  # Fuente #4
+  divipola:
+    path: data\bronze\4_divipola.xlsx
+    filename: 4_divipola.xlsx
+    filetype: xlsx
+    sheetname: Cabeceras - Centros Poblados
+
+# Fuente #5
+  tiempo:
+    path: data\bronze\5_tiempo.csv
+    filename: 5_tiempo.csv
+    filetype: csv
+
+constant:
+  date_format: "%d-%m-%y"
